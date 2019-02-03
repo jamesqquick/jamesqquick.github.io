@@ -11,12 +11,24 @@
 
   <body>
     <div class="container">
-      <div id="game" class="justify-center flex-column ">
+      <div id="loader"></div>
+      <div id="game" class="justify-center flex-column hidden">
         <!-- <a class="btn" href="/">Go Home</a> -->
 
         <div id="hud">
-          <h3 id="questionCounter">1/5</h3>
-          <h3 id="score">Score: 0</h3>
+          <div class="hud-item">
+            <p class="hud-prefix" id="progressText">Progress</p>
+            <div id="progress-bar">
+              <div class="progress-bar-full"></div>
+            </div>
+<!--             
+              <p class="hud-prefix">Question</p>
+            <h1 class="hud-main-text" id="questionCounter">1/5</h1> -->
+          </div>
+          <div class="hud-item">
+            <p class="hud-prefix">Score</p>
+            <h1 class="hud-main-text" id="score">0</spa></h1>
+          </div>
         </div>
         <h2 id="question"></h2>
         <div class="choice-container">
@@ -38,5 +50,6 @@
       </div>
     </div>
     <script src="game.js"></script>
+
   </body>
 </html>

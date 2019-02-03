@@ -1,31 +1,30 @@
-/* GAME */
+/* CHOICES */
 .choice-container {
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
   width: 100%;
-  font-size: 18px;
-  border: 1px solid #56a5eb;
-  margin-bottom: 10px;
-  color: #56a5eb;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgb(86, 165, 235, 0.25);
+  margin-bottom: 1rem;
   background-color: white;
 }
 
 .choice-container:hover {
   cursor: pointer;
-  box-shadow: 0 4px 14px 0 rgba(86, 185, 235, 0.5);
-  transform: translateY(-1px);
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
   transition: transform 150ms;
   transition: transform 150ms, -webkit-transform 150ms;
 }
 
 .choice-prefix {
-  padding: 15px 25px;
+  padding: 1.5rem 2.5rem;
   background-color: #56a5eb;
   color: white;
 }
 
 .choice-text {
-  padding: 15px;
+  padding: 1.5rem;
   flex-grow: 1;
   color: black;
 }
@@ -35,41 +34,62 @@
 }
 
 .incorrect {
-  animation: incorrect 750ms;
-}
-
-#hud {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
+  animation: incorrect 1s;
 }
 
 @keyframes correct {
   0% {
-    border-color: green;
-    background-color: green;
+    background-color: #28a745;
   }
   25% {
-    border-color: green;
-    background-color: green;
+    background-color: #28a745;
   }
   100% {
-    border-color: black;
-    background-color: white;
   }
 }
 
 @keyframes incorrect {
   0% {
-    border-color: red;
-    background-color: red;
+    background-color: #dc3545;
   }
   25% {
-    border-color: red;
-    background-color: red;
+    background-color: #dc3545;
   }
   100% {
-    border-color: black;
-    background-color: white;
   }
+}
+
+/* HEADS UP DISPLAY */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.hud-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hud-prefix {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+#progress-bar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid #56a5eb;
+  position: relative;
+}
+
+.progress-bar-full {
+  height: 3.4rem;
+  background-color: #56a5eb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
